@@ -3,16 +3,14 @@ procesos
   
   proceso tomarPapeles
   comenzar
-    si(HayPapelEnLaEsquina)
-      mientras(HayPapelEnLaEsquina)
-        tomarPapel
+    mientras(HayPapelEnLaEsquina)
+      tomarPapel
   fin
   
   proceso tomarFlores
   comenzar
-    si(HayFlorEnLaEsquina)
-      mientras(HayFlorEnLaEsquina)
-        tomarFlor
+    mientras(HayFlorEnLaEsquina)
+      tomarFlor
   fin
   
   proceso recorrerPar
@@ -31,7 +29,7 @@ procesos
     tomarFlores
   fin
  
-  proceso girar1
+  proceso girar1  {Se puede usar pos(posAv+1, 1) en vez de girar}
   comenzar
     derecha
     mover
