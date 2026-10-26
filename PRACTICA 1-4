@@ -3,7 +3,7 @@ procesos
   
   proceso tomarPapeles
   comenzar
-    mientras(HayPapelEnLaEsquina)
+    mientras(HayPapelEnLaEsquina)    {No usar un "si" aca}
       tomarPapel
   fin
   
