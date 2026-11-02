@@ -1,0 +1,50 @@
+programa PRACTICA_3_1
+procesos
+  proceso recorrerAvenida(E numAv: numero)
+  comenzar
+    Pos(numAv, 1)
+    repetir 99
+      mover
+  fin
+
+areas
+  areaFlo: AreaPC (1,1,5,10)
+  areaPap: AreaPC (6,1,10,9)
+robots
+
+  robot florero
+  variables
+    avenida: numero
+    calle: numero
+    flores: numero
+  comenzar
+    Random(avenida,1,5)
+    Random(calle,1,10)
+  fin
+  
+  robot papelero
+  variables
+    avenida: numero
+    calle: numero
+    flores: numero
+  comenzar
+    Random(avenida,6,10)
+    Random(calle,1,9)
+  fin
+
+variables
+  R1: florero
+  R2: florero
+  R3: papelero
+  R4: papelero
+
+comenzar
+  AsignarArea(R1, areaFlo)
+  AsignarArea(R2, areaFlo)
+  AsignarArea(R3, areaPap)
+  AsignarArea(R4, areaPap)
+  Iniciar(R1, 6,10)
+  Iniciar(R2, 7,10)
+  Iniciar(R3, 8,10)
+  Iniciar(R4, 9,10)
+fin
