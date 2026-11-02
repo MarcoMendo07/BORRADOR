@@ -1,12 +1,29 @@
 programa PRACTICA_3_1
 procesos
-  proceso recorrerAvenida(E numAv: numero)
+  proceso juntarFlores(ES flores: numero)
   comenzar
-    Pos(numAv, 1)
-    repetir 99
-      mover
+    mientras(HayFlorEnLaEsquina)
+      tomarFlor
+      flores:= flores + 1
+  fin
+  
+  proceso juntarPapeles(ES papeles: numero)
+  comenzar
+    mientras(HayPapelEnLaEsquina)
+      tomarPapel
+      papeles:= papeles + 1
   fin
 
+  proceso esquinaCompartidaF(ES flores: numero)
+  variables
+    seguir: boolean
+  comenzar
+    seguir:= V
+    mientras(seguir)
+      BloquearEsquina({avenida, calle origniales, luego me posiciono}
+  
+  fin
+ 
 areas
   areaFlo: AreaPC (1,1,5,10)
   areaPap: AreaPC (6,1,10,9)
@@ -17,9 +34,15 @@ robots
     avenida: numero
     calle: numero
     flores: numero
+    avOriginal: numero
+    calleOriginal: numero
   comenzar
+    avOriginal:= PosAv
+    calleOriginal:= PosCa
     Random(avenida,1,5)
     Random(calle,1,10)
+    repetir 5
+     
   fin
   
   robot papelero
@@ -27,7 +50,11 @@ robots
     avenida: numero
     calle: numero
     flores: numero
+    avOriginal: numero
+    calleOriginal: numero
   comenzar
+    avOriginal:= PosAv
+    calleOriginal:= PosCa|
     Random(avenida,6,10)
     Random(calle,1,9)
   fin
